@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ios-checkbox</title>
+  <style type="text/css">
+    input{
+      display: none;  
+    }     
+
+    .iosCheckbox input + label{
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      border-radius: 999px;
+      background-color: rgb(221,221,221);
+      padding: 3px;
+      box-shadow: inset 0 0 0 0 rgb(110,220,96);
+      transition: box-shadow .2s;
+    }
+
+    .iosCheckbox input + label::before{
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background-color: white;
+      box-shadow: 0 3px 3px #6669;
+      transition: margin-left .2s linear;
+    }
+
+    .iosCheckbox input:checked + label{
+      box-shadow: inset 0 3px 3px 20px rgb(110,220,96);
+    }
+
+   .iosCheckbox input:checked + label::before{
+      margin-left: 30px;
+    }
+
+    .star label{
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-image: url(https://abs.twimg.com/a/1526339738/img/animations/web_heart_animation_edge.png);
+      cursor: pointer;
+      transition: .5s steps(28);
+    }
+
+    .star input:checked + label{
+      background-position: -2800px 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="iosCheckbox">
+    <input type="checkbox" name="" id="gender">
+    <label for="gender"></label>
+  </div>
+
+  <div class="star">
+    <input type="checkbox" name="" id="star">
+    <label for="star"></label>
+  </div>
+</body>
+</html>
